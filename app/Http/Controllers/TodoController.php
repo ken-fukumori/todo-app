@@ -13,4 +13,17 @@ class TodoController extends Controller
             'todos' => $todos,
         ]);
     }
+
+    public function create() {
+        return view('create');
+    }
+
+    public function store(Request $request) {
+        $todo = new Todo();
+        $todo->title = $request->title;
+        $todo->detail = $request->detail;
+        $todo->save();
+
+        return redirect('/');
+    }
 }

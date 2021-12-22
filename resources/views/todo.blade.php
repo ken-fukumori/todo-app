@@ -1,4 +1,12 @@
-@foreach($todos as $todo)
-<p>タイトル：{{ $todo->title }}<p>
-<p>詳細：{{ $todo->detail }}</p>
-@endforeach
+<table border="1">
+  <tr>
+    <th>Todoのタイトル</th>
+    <th>Todoの詳細</th>
+  </tr>
+  @foreach($todos as $todo)
+  <tr>
+    <td>{{ $todo->title }}</td>
+    <td>{{ $todo->detail }}</td>
+  </tr>
+  @endforeach
+</table>
