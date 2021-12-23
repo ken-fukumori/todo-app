@@ -1,3 +1,4 @@
+<a href="{{ route('todo.create')}}">追加画面</a>
 <table border="1">
   <tr>
     <th>Todoのタイトル</th>
@@ -5,7 +6,7 @@
   </tr>
   @foreach($todos as $todo)
   <tr>
-    <td>{{ $todo->title }}</td>
+    <td>{!! nl2br(e($todo->title)) !!}</td>
     <td>{{ $todo->detail }}</td>
   </tr>
   @endforeach

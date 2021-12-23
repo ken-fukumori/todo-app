@@ -10,3 +10,5 @@
   </div>
   <input type="submit" value="登録">
 </form>
+
+<a href="{{route('todo.index')}}">戻る</a>
