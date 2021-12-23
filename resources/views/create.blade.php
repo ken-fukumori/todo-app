@@ -1,4 +1,4 @@
-<form action="{{ route('todo.store') }}" method="post">
+<form action="/store" method="post">
   @csrf
   <div>
     <label>Todoを入力してください：</label>
